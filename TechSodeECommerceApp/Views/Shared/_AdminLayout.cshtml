@@ -8,17 +8,17 @@
     <meta content="TechSode" name="author">
     <title>TechSode Software Shop Admin</title>
     <!-- Favicon icon-->
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/images/favicon/favicon.ico">
 
 
     <!-- Libs CSS -->
-    <link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="../assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet">
-    <link href="../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet">
+    <link href="~/assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="~/assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet">
+    <link href="~/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet">
 
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="../assets/css/theme.min.css">
+    <link rel="stylesheet" href="~/assets/css/theme.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -101,7 +101,7 @@
                                         <li class="list-group-item px-5 py-4 list-group-item-action active">
                                             <a href="#!" class="text-muted">
                                                 <div class="d-flex">
-                                                    <img src="../assets/images/avatar/avatar-1.jpg" alt=""
+                                                    <img src="~/assets/images/avatar/avatar-1.jpg" alt=""
                                                          class="avatar avatar-md rounded-circle" />
                                                     <div class="ms-4">
                                                         <p class="mb-1">
@@ -124,7 +124,7 @@
                                         <li class="list-group-item px-5 py-4 list-group-item-action">
                                             <a href="#!" class="text-muted">
                                                 <div class="d-flex">
-                                                    <img src="../assets/images/avatar/avatar-5.jpg" alt=""
+                                                    <img src="~/assets/images/avatar/avatar-5.jpg" alt=""
                                                          class="avatar avatar-md rounded-circle" />
                                                     <div class="ms-4">
                                                         <p class="mb-1">
@@ -147,7 +147,7 @@
                                         <li class="list-group-item px-5 py-4 list-group-item-action">
                                             <a href="#!" class="text-muted">
                                                 <div class="d-flex">
-                                                    <img src="../assets/images/avatar/avatar-2.jpg" alt=""
+                                                    <img src="~/assets/images/avatar/avatar-2.jpg" alt=""
                                                          class="avatar avatar-md rounded-circle" />
                                                     <div class="ms-4">
                                                         <p class="mb-1">
@@ -176,13 +176,13 @@
                         </li>
                         <li class="dropdown ms-4">
                             <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/images/avatar/avatar-1.jpg" alt=""
+                                <img src="~/assets/images/avatar/avatar-1.jpg" alt=""
                                      class="avatar avatar-md rounded-circle" />
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end p-0">
                                 <div class="lh-1 px-5 py-4 border-bottom">
-                                    <h5 class="mb-1 h6">TechSode Admin</h5>
+                                    <h5 class="mb-1 h6">FreshCart Admin</h5>
                                     <small>admindemo@email.com</small>
                                 </div>
 
@@ -214,8 +214,8 @@
         <nav class="navbar-vertical-nav d-none d-xl-block">
             <div class="navbar-vertical">
                 <div class="px-4 py-5">
-                    <a href="../index.html" class="navbar-brand">
-                        <img src="../assets/images/logo/freshcart-logo.svg" alt="" />
+                    <a href="~/index.html" class="navbar-brand">
+                        <img src="~/assets/images/logo/freshcart-logo.svg" alt="" />
                     </a>
                 </div>
                 <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
@@ -240,7 +240,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="categories.html">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Categories">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
                                     <span class="nav-link-text">Categories</span>
@@ -445,7 +445,7 @@
                             <a class="nav-link disabled" href="#!">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-infinity"></i></span>
-                                    <span class="nav-link-text">How TechSode Works</span>
+                                    <span class="nav-link-text">How FreshCart Works</span>
                                 </div>
                             </a>
                         </li>
@@ -478,8 +478,8 @@
              id="offcanvasExample">
             <div class="navbar-vertical">
                 <div class="px-4 py-5 d-flex justify-content-between align-items-center">
-                    <a href="../index.html" class="navbar-brand">
-                        <img src="../assets/images/logo/freshcart-logo.svg" alt="" />
+                    <a href="~/index.html" class="navbar-brand">
+                        <img src="~/assets/images/logo/freshcart-logo.svg" alt="" />
                     </a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -505,7 +505,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="categories.html">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Categories">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
                                     <span class="nav-link-text">Categories</span>
@@ -608,7 +608,7 @@
                             <a class="nav-link disabled" href="#!">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-infinity"></i></span>
-                                    <span class="nav-link-text">How TechSode Works</span>
+                                    <span class="nav-link-text">How FreshCart Works</span>
                                 </div>
                             </a>
                         </li>
@@ -697,14 +697,14 @@
     </footer>
 
     <!-- Libs JS -->
-    <!-- <script src="../assets/libs/jquery/dist/jquery.min.js"></script> -->
-    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
+    <!-- <script src="~/assets/libs/jquery/dist/jquery.min.js"></script> -->
+    <script src="~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/libs/simplebar/dist/simplebar.min.js"></script>
 
     <!-- Theme JS -->
-    <script src="../assets/js/theme.min.js"></script>
+    <script src="~/assets/js/theme.min.js"></script>
 
-    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="../assets/js/vendors/chart.js"></script>
+    <script src="~/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="~/assets/js/vendors/chart.js"></script>
 </body>
 </html>

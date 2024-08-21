@@ -9,5 +9,16 @@ namespace TechSodeECommerceApp.Areas.Admin.Controllers
         {
             return View();
         }
+        public IActionResult AddCategory()
+        {
+
+            return View();
+        }
+
+        public IActionResult Categories()
+        {
+
+            return View();
+        }
     }
 }
