@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta content="TechSode" name="author" />
     <title>TechSode Ecommerce App</title>
 
-    <link href="assets/libs/slick-carousel/slick/slick.css" rel="stylesheet" />
-    <link href="assets/libs/slick-carousel/slick/slick-theme.css" rel="stylesheet" />
-    <link href="assets/libs/tiny-slider/dist/tiny-slider.css" rel="stylesheet" />
+    <link href="~/assets/libs/slick-carousel/slick/slick.css" rel="stylesheet" />
+    <link href="~/assets/libs/slick-carousel/slick/slick-theme.css" rel="stylesheet" />
+    <link href="~/assets/libs/tiny-slider/dist/tiny-slider.css" rel="stylesheet" />
 
     <!-- Favicon icon-->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/images/favicon/favicon.ico" />
 
     <!-- Libs CSS -->
-    <link href="assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
-    <link href="assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+    <link href="~/assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="~/assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
+    <link href="~/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="assets/css/theme.min.css" />
+    <link rel="stylesheet" href="~/assets/css/theme.min.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -132,12 +132,12 @@
                 <div class="container">
                     <div class="row w-100 align-items-center gx-lg-2 gx-0">
                         <div class="col-xxl-2 col-lg-3 col-md-6 col-5">
-                            <a class="navbar-brand d-none d-lg-block" href="index.html">
-                                <img src="assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
+                            <a class="navbar-brand d-none d-lg-block" asp-action="Index">
+                                <img src="~/assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
                             </a>
                             <div class="d-flex justify-content-between w-100 d-lg-none">
-                                <a class="navbar-brand" href="index.html">
-                                    <img src="assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
+                                <a class="navbar-brand" asp-action="Index">
+                                    <img src="~/assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
                                 </a>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                         <div class="col-lg-2 col-xxl-2 text-end col-md-6 col-7">
                             <div class="list-inline">
                                 <div class="list-inline-item me-5">
-                                    <a href="pages/shop-wishlist.html" class="text-muted position-relative">
+                                    <a asp-action="ShopWishlist" class="text-muted position-relative">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                              width="20"
                                              height="20"
@@ -256,7 +256,7 @@
                 <div class="container">
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-default" aria-labelledby="navbar-defaultLabel">
                         <div class="offcanvas-header pb-1">
-                            <a href="index.html"><img src="assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" /></a>
+                            <a asp-action="Index"><img src="~/assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" /></a>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
@@ -319,13 +319,13 @@
                                 <div class="collapse mt-2" id="collapseExample">
                                     <div class="card card-body">
                                         <ul class="mb-0 list-unstyled">
-                                            <li><a class="dropdown-item" href="pages/shop-grid.html">Dairy, Bread & Eggs</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-grid.html">Snacks & Munchies</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-grid.html">Fruits & Vegetables</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-grid.html">Cold Drinks & Juices</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-grid.html">Breakfast & Instant Food</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-grid.html">Bakery & Biscuits</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-grid.html">Chicken, Meat & Fish</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopGrid">Dairy, Bread & Eggs</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopGrid">Snacks & Munchies</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopGrid">Fruits & Vegetables</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopGrid">Cold Drinks & Juices</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopGrid">Breakfast & Instant Food</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopGrid">Bakery & Biscuits</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopGrid">Chicken, Meat & Fish</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -352,13 +352,13 @@
                                     All Departments
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="pages/shop-grid.html">Dairy, Bread & Eggs</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-grid.html">Snacks & Munchies</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-grid.html">Fruits & Vegetables</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-grid.html">Cold Drinks & Juices</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-grid.html">Breakfast & Instant Food</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-grid.html">Bakery & Biscuits</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-grid.html">Chicken, Meat & Fish</a></li>
+                                    <li><a class="dropdown-item" asp-action="ShopGrid">Dairy, Bread & Eggs</a></li>
+                                    <li><a class="dropdown-item" asp-action="ShopGrid">Snacks & Munchies</a></li>
+                                    <li><a class="dropdown-item" asp-action="ShopGrid">Fruits & Vegetables</a></li>
+                                    <li><a class="dropdown-item" asp-action="ShopGrid">Cold Drinks & Juices</a></li>
+                                    <li><a class="dropdown-item" asp-action="ShopGrid">Breakfast & Instant Food</a></li>
+                                    <li><a class="dropdown-item" asp-action="ShopGrid">Bakery & Biscuits</a></li>
+                                    <li><a class="dropdown-item" asp-action="ShopGrid">Chicken, Meat & Fish</a></li>
                                 </ul>
                             </div>
                             <div>
@@ -366,36 +366,36 @@
                                     <li class="nav-item dropdown w-100 w-lg-auto">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
-                                            <li><a class="dropdown-item" href="pages/index-2.html">Home 2</a></li>
-                                            <li><a class="dropdown-item" href="pages/index-3.html">Home 3</a></li>
-                                            <li><a class="dropdown-item" href="pages/index-4.html">Home 4</a></li>
+                                            <li><a class="dropdown-item" asp-action="Index">Home 1</a></li>
+                                            <li><a class="dropdown-item" asp-action="Index2">Home 2</a></li>
+                                            <li><a class="dropdown-item" asp-action="Index3">Home 3</a></li>
+                                            <li><a class="dropdown-item" asp-action="Index4">Home 4</a></li>
                                             <li>
-                                                <a class="dropdown-item" href="pages/index-5.html">Home 5</a>
+                                                <a class="dropdown-item" asp-action="Index5">Home 5</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown w-100 w-lg-auto">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="pages/shop-grid.html">Shop Grid - Filter</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-grid-3-column.html">Shop Grid - 3 column</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-list.html">Shop List - Filter</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-filter.html">Shop - Filter</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-fullwidth.html">Shop Wide</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-single.html">Shop Single</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-single-2.html">Shop Single v2</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-wishlist.html">Shop Wishlist</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-cart.html">Shop Cart</a></li>
-                                            <li><a class="dropdown-item" href="pages/shop-checkout.html">Shop Checkout</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopGrid">Shop Grid - Filter</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopGrid3Column">Shop Grid - 3 column</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopList">Shop List - Filter</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopFilter">Shop - Filter</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopFullWidth">Shop Wide</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopSingle">Shop Single</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopSingle2">Shop Single v2</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopWishlist">Shop Wishlist</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopCart">Shop Cart</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopCheckout">Shop Checkout</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown w-100 w-lg-auto">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Stores</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="pages/store-list.html">Store List</a></li>
-                                            <li><a class="dropdown-item" href="pages/store-grid.html">Store Grid</a></li>
-                                            <li><a class="dropdown-item" href="pages/store-single.html">Store Single</a></li>
+                                            <li><a class="dropdown-item" asp-action="ShopList">Store List</a></li>
+                                            <li><a class="dropdown-item" asp-action="StoreGrid">Store Grid</a></li>
+                                            <li><a class="dropdown-item" asp-action="StoreSingle">Store Single</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown w-100 w-lg-auto dropdown-fullwidth">
@@ -404,40 +404,40 @@
                                             <div class="row p-2 p-lg-4">
                                                 <div class="col-lg-3 col-12 mb-4 mb-lg-0">
                                                     <h6 class="text-primary ps-3">Dairy, Bread & Eggs</h6>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Butter</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Milk Drinks</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Curd & Yogurt</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Eggs</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Buns & Bakery</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Cheese</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Condensed Milk</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Dairy Products</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Butter</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Milk Drinks</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Curd & Yogurt</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Eggs</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Buns & Bakery</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Cheese</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Condensed Milk</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Dairy Products</a>
                                                 </div>
                                                 <div class="col-lg-3 col-12 mb-4 mb-lg-0">
                                                     <h6 class="text-primary ps-3">Breakfast & Instant Food</h6>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Breakfast Cereal</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Noodles, Pasta & Soup</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Frozen Veg Snacks</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Frozen Non-Veg Snacks</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Vermicelli</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Instant Mixes</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Batter</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Fruit and Juices</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Breakfast Cereal</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Noodles, Pasta & Soup</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Frozen Veg Snacks</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Frozen Non-Veg Snacks</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Vermicelli</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Instant Mixes</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Batter</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Fruit and Juices</a>
                                                 </div>
                                                 <div class="col-lg-3 col-12 mb-4 mb-lg-0">
                                                     <h6 class="text-primary ps-3">Cold Drinks & Juices</h6>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Soft Drinks</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Fruit Juices</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Coldpress</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Water & Ice Cubes</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Soda & Mixers</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Health Drinks</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Herbal Drinks</a>
-                                                    <a class="dropdown-item" href="pages/shop-grid.html">Milk Drinks</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Soft Drinks</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Fruit Juices</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Coldpress</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Water & Ice Cubes</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Soda & Mixers</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Health Drinks</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Herbal Drinks</a>
+                                                    <a class="dropdown-item" asp-action="ShopGrid">Milk Drinks</a>
                                                 </div>
                                                 <div class="col-lg-3 col-12 mb-4 mb-lg-0">
                                                     <div class="card border-0">
-                                                        <img src="assets/images/banner/menu-banner.jpg" alt="eCommerce HTML Template" class="img-fluid" />
+                                                        <img src="~/assets/images/banner/menu-banner.jpg" alt="eCommerce HTML Template" class="img-fluid" />
                                                         <div class="position-absolute ps-6 mt-8">
                                                             <h5 class="mb-0">
                                                                 Dont miss this
@@ -454,39 +454,39 @@
                                     <li class="nav-item dropdown w-100 w-lg-auto">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="pages/blog.html">Blog</a></li>
-                                            <li><a class="dropdown-item" href="pages/blog-single.html">Blog Single</a></li>
-                                            <li><a class="dropdown-item" href="pages/blog-category.html">Blog Category</a></li>
-                                            <li><a class="dropdown-item" href="pages/about.html">About us</a></li>
-                                            <li><a class="dropdown-item" href="pages/404error.html">404 Error</a></li>
-                                            <li><a class="dropdown-item" href="pages/contact.html">Contact</a></li>
+                                            <li><a class="dropdown-item" asp-action="Blog">Blog</a></li>
+                                            <li><a class="dropdown-item" asp-action="BlogSingle">Blog Single</a></li>
+                                            <li><a class="dropdown-item" asp-action="BlogCategory">Blog Category</a></li>
+                                            <li><a class="dropdown-item" asp-action="About">About us</a></li>
+                                            <li><a class="dropdown-item" asp-action="Error404">404 Error</a></li>
+                                            <li><a class="dropdown-item" asp-action="Contact">Contact</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown w-100 w-lg-auto">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="pages/signin.html">Sign in</a></li>
-                                            <li><a class="dropdown-item" href="pages/signup.html">Signup</a></li>
-                                            <li><a class="dropdown-item" href="pages/forgot-password.html">Forgot Password</a></li>
+                                            <li><a class="dropdown-item" asp-action="SignIn">Sign in</a></li>
+                                            <li><a class="dropdown-item" asp-action="SignUp">Signup</a></li>
+                                            <li><a class="dropdown-item" asp-action="ForgotPassword">Forgot Password</a></li>
                                             <li class="dropdown-submenu dropend">
                                                 <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">My Account</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="pages/account-orders.html">Orders</a></li>
-                                                    <li><a class="dropdown-item" href="pages/account-settings.html">Settings</a></li>
-                                                    <li><a class="dropdown-item" href="pages/account-address.html">Address</a></li>
-                                                    <li><a class="dropdown-item" href="pages/account-payment-method.html">Payment Method</a></li>
-                                                    <li><a class="dropdown-item" href="pages/account-notification.html">Notification</a></li>
+                                                    <li><a class="dropdown-item" asp-action="AccountOrders">Orders</a></li>
+                                                    <li><a class="dropdown-item" asp-action="AccountSettings">Settings</a></li>
+                                                    <li><a class="dropdown-item" asp-action="AccountAddress">Address</a></li>
+                                                    <li><a class="dropdown-item" asp-action="AccountPaymentMethod">Payment Method</a></li>
+                                                    <li><a class="dropdown-item" asp-action="AccountNotification">Notification</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="nav-item w-100 w-lg-auto">
-                                        <a class="nav-link" href="dashboard/index.html">Dashboard</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
                                     </li>
                                     <li class="nav-item dropdown w-100 w-lg-auto dropdown-flyout">
                                         <a class="nav-link" href="#" id="navbarDropdownDocs" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Docs</a>
                                         <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarDropdownDocs">
-                                            <a class="dropdown-item align-items-start" href="docs/index.html">
+                                            <a class="dropdown-item align-items-start" href="~/docs/index.html">
                                                 <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-text text-primary" viewBox="0 0 16 16">
                                                         <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z" />
@@ -498,7 +498,7 @@
                                                     <p class="mb-0 small">Browse the all documentation</p>
                                                 </div>
                                             </a>
-                                            <a class="dropdown-item align-items-start" href="docs/changelog.html">
+                                            <a class="dropdown-item align-items-start" href="~/docs/changelog.html">
                                                 <div>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers text-primary" viewBox="0 0 16 16">
                                                         <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zm3.515 7.008L14.438 10 8 13.433 1.562 10 4.25 8.567l3.515 1.874a.5.5 0 0 0 .47 0l3.515-1.874zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z" />
@@ -590,10 +590,10 @@
                             <div class="row align-items-center">
                                 <div class="col-6 col-md-6 col-lg-7">
                                     <div class="d-flex">
-                                        <img src="assets/images/products/product-img-1.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                                        <img src="~/assets/images/products/product-img-1.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                                         <div class="ms-3">
                                             <!-- title -->
-                                            <a href="pages/shop-single.html" class="text-inherit">
+                                            <a asp-action="ShopSingle" class="text-inherit">
                                                 <h6 class="mb-0">Haldiram's Sev Bhujia</h6>
                                             </a>
                                             <span><small class="text-muted">.98 / lb</small></span>
@@ -645,9 +645,9 @@
                             <div class="row align-items-center">
                                 <div class="col-6 col-md-6 col-lg-7">
                                     <div class="d-flex">
-                                        <img src="assets/images/products/product-img-2.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                                        <img src="~/assets/images/products/product-img-2.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                                         <div class="ms-3">
-                                            <a href="pages/shop-single.html" class="text-inherit">
+                                            <a asp-action="ShopSingle" class="text-inherit">
                                                 <h6 class="mb-0">NutriChoice Digestive</h6>
                                             </a>
                                             <span><small class="text-muted">250g</small></span>
@@ -701,10 +701,10 @@
                             <div class="row align-items-center">
                                 <div class="col-6 col-md-6 col-lg-7">
                                     <div class="d-flex">
-                                        <img src="assets/images/products/product-img-3.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                                        <img src="~/assets/images/products/product-img-3.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                                         <div class="ms-3">
                                             <!-- title -->
-                                            <a href="pages/shop-single.html" class="text-inherit">
+                                            <a asp-action="ShopSingle" class="text-inherit">
                                                 <h6 class="mb-0">Cadbury 5 Star Chocolate</h6>
                                             </a>
                                             <span><small class="text-muted">1 kg</small></span>
@@ -758,11 +758,11 @@
                             <div class="row align-items-center">
                                 <div class="col-6 col-md-6 col-lg-7">
                                     <div class="d-flex">
-                                        <img src="assets/images/products/product-img-4.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                                        <img src="~/assets/images/products/product-img-4.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                                         <div class="ms-3">
                                             <!-- title -->
                                             <!-- title -->
-                                            <a href="pages/shop-single.html" class="text-inherit">
+                                            <a asp-action="ShopSingle" class="text-inherit">
                                                 <h6 class="mb-0">Onion Flavour Potato</h6>
                                             </a>
                                             <span><small class="text-muted">250g</small></span>
@@ -816,10 +816,10 @@
                             <div class="row align-items-center">
                                 <div class="col-6 col-md-6 col-lg-7">
                                     <div class="d-flex">
-                                        <img src="assets/images/products/product-img-5.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                                        <img src="~/assets/images/products/product-img-5.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                                         <div class="ms-3">
                                             <!-- title -->
-                                            <a href="pages/shop-single.html" class="text-inherit">
+                                            <a asp-action="ShopSingle" class="text-inherit">
                                                 <h6 class="mb-0">Salted Instant Popcorn</h6>
                                             </a>
                                             <span><small class="text-muted">100g</small></span>
@@ -947,7 +947,7 @@
             </div>
         </div>
 
-        <script src="assets/js/vendors/validation.js"></script>
+        <script src="~/assets/js/vendors/validation.js"></script>
 
     </header>
     
@@ -971,24 +971,24 @@
                             <div class="product productModal" id="productModal">
                                 <div class="zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/product-single-img-1.jpg)">
                                     <!-- img -->
-                                    <img src="assets/images/products/product-single-img-1.jpg" alt="" />
+                                    <img src="~/assets/images/products/product-single-img-1.jpg" alt="" />
                                 </div>
                                 <div>
                                     <div class="zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/product-single-img-2.jpg)">
                                         <!-- img -->
-                                        <img src="assets/images/products/product-single-img-2.jpg" alt="" />
+                                        <img src="~/assets/images/products/product-single-img-2.jpg" alt="" />
                                     </div>
                                 </div>
                                 <div>
                                     <div class="zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/product-single-img-3.jpg)">
                                         <!-- img -->
-                                        <img src="assets/images/products/product-single-img-3.jpg" alt="" />
+                                        <img src="~/assets/images/products/product-single-img-3.jpg" alt="" />
                                     </div>
                                 </div>
                                 <div>
                                     <div class="zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/product-single-img-4.jpg)">
                                         <!-- img -->
-                                        <img src="assets/images/products/product-single-img-4.jpg" alt="" />
+                                        <img src="~/assets/images/products/product-single-img-4.jpg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -998,25 +998,25 @@
                                     <div class="col-3" class="tns-nav-active">
                                         <div class="thumbnails-img">
                                             <!-- img -->
-                                            <img src="assets/images/products/product-single-img-1.jpg" alt="" />
+                                            <img src="~/assets/images/products/product-single-img-1.jpg" alt="" />
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="thumbnails-img">
                                             <!-- img -->
-                                            <img src="assets/images/products/product-single-img-2.jpg" alt="" />
+                                            <img src="~/assets/images/products/product-single-img-2.jpg" alt="" />
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="thumbnails-img">
                                             <!-- img -->
-                                            <img src="assets/images/products/product-single-img-3.jpg" alt="" />
+                                            <img src="~/assets/images/products/product-single-img-3.jpg" alt="" />
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="thumbnails-img">
                                             <!-- img -->
-                                            <img src="assets/images/products/product-single-img-4.jpg" alt="" />
+                                            <img src="~/assets/images/products/product-single-img-4.jpg" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -1164,7 +1164,7 @@
                                 <li class="nav-item mb-2"><a href="#!" class="nav-link">Shipping</a></li>
                                 <li class="nav-item mb-2"><a href="#!" class="nav-link">Product Returns</a></li>
                                 <li class="nav-item mb-2"><a href="#!" class="nav-link">FAQ</a></li>
-                                <li class="nav-item mb-2"><a href="pages/shop-checkout.html" class="nav-link">Shop Checkout</a></li>
+                                <li class="nav-item mb-2"><a asp-action="ShopCheckout" class="nav-link">Shop Checkout</a></li>
                             </ul>
                         </div>
                         <div class="col-6 col-sm-6 col-md-3">
@@ -1198,19 +1198,19 @@
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item text-dark">Payment Partners</li>
                             <li class="list-inline-item">
-                                <a href="#!"><img src="assets/images/payment/amazonpay.svg" alt="" /></a>
+                                <a href="#!"><img src="~/assets/images/payment/amazonpay.svg" alt="" /></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!"><img src="assets/images/payment/american-express.svg" alt="" /></a>
+                                <a href="#!"><img src="~/assets/images/payment/american-express.svg" alt="" /></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!"><img src="assets/images/payment/mastercard.svg" alt="" /></a>
+                                <a href="#!"><img src="~/assets/images/payment/mastercard.svg" alt="" /></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!"><img src="assets/images/payment/paypal.svg" alt="" /></a>
+                                <a href="#!"><img src="~/assets/images/payment/paypal.svg" alt="" /></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!"><img src="assets/images/payment/visa.svg" alt="" /></a>
+                                <a href="#!"><img src="~/assets/images/payment/visa.svg" alt="" /></a>
                             </li>
                         </ul>
                     </div>
@@ -1218,10 +1218,10 @@
                         <ul class="list-inline mb-0 text-lg-end text-center">
                             <li class="list-inline-item mb-2 mb-md-0 text-dark">Get deliveries with TechSode</li>
                             <li class="list-inline-item ms-4">
-                                <a href="#!"><img src="assets/images/appbutton/appstore-btn.svg" alt="" style="width: 140px" /></a>
+                                <a href="#!"><img src="~/assets/images/appbutton/appstore-btn.svg" alt="" style="width: 140px" /></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!"><img src="assets/images/appbutton/googleplay-btn.svg" alt="" style="width: 140px" /></a>
+                                <a href="#!"><img src="~/assets/images/appbutton/googleplay-btn.svg" alt="" style="width: 140px" /></a>
                             </li>
                         </ul>
                     </div>
@@ -1278,19 +1278,19 @@
     <!-- Javascript-->
     <!-- Libs JS -->
     <!-- <script src="./assets/libs/jquery/dist/jquery.min.js"></script> -->
-    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
+    <script src="~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/libs/simplebar/dist/simplebar.min.js"></script>
 
     <!-- Theme JS -->
-    <script src="assets/js/theme.min.js"></script>
+    <script src="~/assets/js/theme.min.js"></script>
 
-    <script src="assets/js/vendors/jquery.min.js"></script>
-    <script src="assets/js/vendors/countdown.js"></script>
-    <script src="assets/libs/slick-carousel/slick/slick.min.js"></script>
-    <script src="assets/js/vendors/slick-slider.js"></script>
-    <script src="assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
-    <script src="assets/js/vendors/tns-slider.js"></script>
-    <script src="assets/js/vendors/zoom.js"></script>
+    <script src="~/assets/js/vendors/jquery.min.js"></script>
+    <script src="~/assets/js/vendors/countdown.js"></script>
+    <script src="~/assets/libs/slick-carousel/slick/slick.min.js"></script>
+    <script src="~/assets/js/vendors/slick-slider.js"></script>
+    <script src="~/assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="~/assets/js/vendors/tns-slider.js"></script>
+    <script src="~/assets/js/vendors/zoom.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

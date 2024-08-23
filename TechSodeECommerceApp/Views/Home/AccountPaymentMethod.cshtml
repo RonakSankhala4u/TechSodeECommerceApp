@@ -1,0 +1,187 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "AccountPaymentMethod";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- section -->
+<section>
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- col -->
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center d-md-none py-4">
+                    <!-- heading -->
+                    <h3 class="fs-5 mb-0">Account Setting</h3>
+                    <!-- button -->
+                    <button class="btn btn-outline-gray-400 text-muted d-md-none btn-icon btn-sm ms-3"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasAccount"
+                            aria-controls="offcanvasAccount">
+                        <i class="bi bi-text-indent-left fs-3"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-3 col-md-4 col-12 border-end d-none d-md-block">
+                <div class="pt-10 pe-lg-10">
+                    <!-- nav -->
+                    <ul class="nav flex-column nav-pills nav-pills-dark">
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" asp-controller="Home" asp-action="AccountOrders">
+                                <i class="feather-icon icon-shopping-bag me-2"></i>
+                                Your Orders
+                            </a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="AccountSettings">
+                                <i class="feather-icon icon-settings me-2"></i>
+                                Settings
+                            </a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="AccountAddress">
+                                <i class="feather-icon icon-map-pin me-2"></i>
+                                Address
+                            </a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="AccountPaymentMethod">
+                                <i class="feather-icon icon-credit-card me-2"></i>
+                                Payment Method
+                            </a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-action="AccountNotification">
+                                <i class="feather-icon icon-bell me-2"></i>
+                                Notification
+                            </a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <hr />
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Index">
+                                <i class="feather-icon icon-log-out me-2"></i>
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8 col-12">
+                <div class="py-6 p-md-6 p-lg-10">
+                    <!-- heading -->
+                    <div class="d-flex justify-content-between mb-6 align-items-center">
+                        <h2 class="mb-0">Payment Methods</h2>
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Add Payment</a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <!-- List group item -->
+                        <li class="list-group-item py-5 px-0">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <!-- img -->
+                                    <img src="~/assets/images/svg-graphics/visa.svg" alt="" />
+                                    <!-- text -->
+                                    <div class="ms-4">
+                                        <h5 class="mb-0 h6 h6">**** 1234</h5>
+                                        <p class="mb-0 small">Expires in 10/2023</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- button -->
+                                    <a href="#" class="btn btn-outline-gray-400 disabled btn-sm">Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- List group item -->
+                        <li class="list-group-item px-0 py-5">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <!-- img -->
+                                    <img src="~/assets/images/svg-graphics/mastercard.svg" alt="" class="me-3" />
+                                    <div>
+                                        <h5 class="mb-0 h6">Mastercard ending in 1234</h5>
+                                        <p class="mb-0 small">Expires in 03/2026</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- button-->
+                                    <a href="#" class="btn btn-outline-gray-400 text-muted btn-sm">Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- List group item -->
+                        <li class="list-group-item px-0 py-5">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <!-- img -->
+                                    <img src="~/assets/images/svg-graphics/discover.svg" alt="" class="me-3" />
+                                    <div>
+                                        <!-- text -->
+                                        <h5 class="mb-0 h6">Discover ending in 1234</h5>
+                                        <p class="mb-0 small">
+                                            Expires in 07/2020
+                                            <span class="badge bg-warning text-dark">This card is expired.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- btn -->
+                                    <a href="#" class="btn btn-outline-gray-400 text-muted btn-sm">Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- List group item -->
+                        <li class="list-group-item px-0 py-5">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <!-- img -->
+                                    <img src="~/assets/images/svg-graphics/americanexpress.svg" alt="" class="me-3" />
+                                    <!-- text -->
+                                    <div>
+                                        <h5 class="mb-0 h6">American Express ending in 1234</h5>
+                                        <p class="mb-0 small">Expires in 12/2021</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- btn -->
+                                    <a href="#" class="btn btn-outline-gray-400 text-muted btn-sm">Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- List group item -->
+                        <li class="list-group-item px-0 py-5 border-bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <!-- img -->
+                                    <img src="~/assets/images/svg-graphics/paypal.svg" alt="" class="me-3" />
+                                    <div>
+                                        <!-- text -->
+                                        <h5 class="mb-0 h6">Paypal Express ending in 1234</h5>
+                                        <p class="mb-0 small">Expires in 10/2021</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- btn -->
+                                    <a href="#" class="btn btn-outline-gray-400 text-muted btn-sm">Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

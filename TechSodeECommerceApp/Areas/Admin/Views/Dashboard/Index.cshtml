@@ -1,4 +1,6 @@
-﻿@{
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -12,7 +14,7 @@
 				<div class="card-body p-lg-12">
 					<h1>Welcome back! TechSode</h1>
 					<p>TechSode is simple & clean design for developer and designer.</p>
-					<a href="#" class="btn btn-primary">Create Product</a>
+					<a asp-area="Admin" asp-controller="Dashboard" asp-action="AddProduct" class="btn btn-primary">Create Product</a>
 				</div>
 			</div>
 		</div>

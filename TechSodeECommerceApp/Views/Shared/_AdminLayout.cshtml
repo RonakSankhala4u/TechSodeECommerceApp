@@ -182,7 +182,7 @@
 
                             <div class="dropdown-menu dropdown-menu-end p-0">
                                 <div class="lh-1 px-5 py-4 border-bottom">
-                                    <h5 class="mb-1 h6">FreshCart Admin</h5>
+                                    <h5 class="mb-1 h6">TechSode Admin</h5>
                                     <small>admindemo@email.com</small>
                                 </div>
 
@@ -214,14 +214,14 @@
         <nav class="navbar-vertical-nav d-none d-xl-block">
             <div class="navbar-vertical">
                 <div class="px-4 py-5">
-                    <a href="~/index.html" class="navbar-brand">
+                    <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="navbar-brand">
                         <img src="~/assets/images/logo/freshcart-logo.svg" alt="" />
                     </a>
                 </div>
                 <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
                     <ul class="navbar-nav flex-column" id="sideNavbar">
                         <li class="nav-item">
-                            <a class="nav-link  active " href="index.html">
+                            <a class="nav-link  active" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-house"></i></span>
                                     <span class="nav-link-text">Dashboard</span>
@@ -232,7 +232,7 @@
                             <span class="nav-label">Store Managements</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="products.html">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Products">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
                                     <span class="nav-link-text">Products</span>
@@ -259,18 +259,18 @@
                             <div id="navCategoriesOrders" class="collapse " data-bs-parent="#sideNavbar">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link " href="order-list.html">List</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="OrderList">List</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link " href="order-single.html">Single</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="OrderDetails">Single</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="vendor-grid.html">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="VendorGrid">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-shop"></i></span>
                                     <span class="nav-link-text">Sellers / Vendors</span>
@@ -289,22 +289,22 @@
                             <div id="navCustomer" class="collapse " data-bs-parent="#sideNavbar">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link " href="customers.html">Customers</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Customers">Customers</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link " href="create-customers.html">Create Customers</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="AddCustomer">Create Customers</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link " href="customers-edits.html">Edit Customers</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="EditCustomer">Edit Customers</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="reviews.html">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Reviews">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-star"></i></span>
                                     <span class="nav-link-text">Reviews</span>
@@ -322,7 +322,7 @@
                             <div id="navMenuLevelFirst" class="collapse " data-bs-parent="#sideNavbar">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link " href="#" data-bs-toggle="collapse"
+                                        <a class="nav-link" href="#" data-bs-toggle="collapse"
                                            data-bs-target="#navMenuLevelSecond1" aria-expanded="false"
                                            aria-controls="navMenuLevelSecond1">
                                             Two Level
@@ -331,10 +331,10 @@
                                              data-bs-parent="#navMenuLevel">
                                             <ul class="nav flex-column">
                                                 <li class="nav-item">
-                                                    <a class="nav-link " href="#">NavItem 1</a>
+                                                    <a class="nav-link" href="#">NavItem 1</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link " href="#">NavItem 2</a>
+                                                    <a class="nav-link" href="#">NavItem 2</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -359,13 +359,13 @@
                                                          data-bs-parent="#navMenuLevelThree">
                                                         <ul class="nav flex-column">
                                                             <li class="nav-item">
-                                                                <a class="nav-link " href="#">NavChild Item 1</a>
+                                                                <a class="nav-link" href="#">NavChild Item 1</a>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link " href="#">Nav Item 2</a>
+                                                    <a class="nav-link" href="#">Nav Item 2</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -390,15 +390,15 @@
                             <div id="navBlog" class="collapse " data-bs-parent="#sideNavbar">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link " href="blog-grid.html">Grid</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="BlogGrid">Grid</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link " href="blog-list.html">List</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="BlogList">List</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link " href="blog-new-post.html">Add Post</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="AddBlog">Add Post</a>
                                     </li>
                                 </ul>
                             </div>
@@ -445,7 +445,7 @@
                             <a class="nav-link disabled" href="#!">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-infinity"></i></span>
-                                    <span class="nav-link-text">How FreshCart Works</span>
+                                    <span class="nav-link-text">How TechSode Works</span>
                                 </div>
                             </a>
                         </li>
@@ -478,7 +478,7 @@
              id="offcanvasExample">
             <div class="navbar-vertical">
                 <div class="px-4 py-5 d-flex justify-content-between align-items-center">
-                    <a href="~/index.html" class="navbar-brand">
+                    <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="navbar-brand">
                         <img src="~/assets/images/logo/freshcart-logo.svg" alt="" />
                     </a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -486,7 +486,7 @@
                 <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
                     <ul class="navbar-nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link  active " href="index.html">
+                            <a class="nav-link  active" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-house"></i></span>
                                     <span>Dashboard</span>
@@ -497,7 +497,7 @@
                             <span class="nav-label">Store Managements</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="products.html">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Products">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
                                     <span class="nav-link-text">Products</span>
@@ -523,17 +523,17 @@
                             <div id="navOrders" class="collapse " data-bs-parent="#sideNavbar">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link " href="order-list.html">List</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="OrderList">List</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link " href="order-single.html">Single</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="OrderDetails">Single</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="vendor-grid.html">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="VendorGrid">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-shop"></i></span>
                                     <span class="nav-link-text">Sellers / Vendors</span>
@@ -541,7 +541,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="customers.html">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Customers">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-people"></i></span>
                                     <span class="nav-link-text">Customers</span>
@@ -549,7 +549,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="reviews.html">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Reviews">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-star"></i></span>
                                     <span class="nav-link-text">Reviews</span>
@@ -561,7 +561,7 @@
                             <span class="badge bg-light-info text-dark-info">Coming Soon</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#!">
+                            <a class="nav-link" href="#!">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-newspaper"></i></span>
                                     <span class="nav-link-text">Blog</span>
@@ -608,7 +608,7 @@
                             <a class="nav-link disabled" href="#!">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-infinity"></i></span>
-                                    <span class="nav-link-text">How FreshCart Works</span>
+                                    <span class="nav-link-text">How TechSode Works</span>
                                 </div>
                             </a>
                         </li>
@@ -635,7 +635,7 @@
                         <li id="navMenuLevel" class="collapse " data-bs-parent="#sideNavbar">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link " href="#" data-bs-toggle="collapse"
+                                    <a class="nav-link" href="#" data-bs-toggle="collapse"
                                        data-bs-target="#navMenuLevelSecond2" aria-expanded="false"
                                        aria-controls="navMenuLevelSecond2">
                                         Two Level
@@ -643,10 +643,10 @@
                                     <div id="navMenuLevelSecond2" class="collapse" data-bs-parent="#navMenuLevel">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link " href="#">NavItem 1</a>
+                                                <a class="nav-link" href="#">NavItem 1</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link " href="#">NavItem 2</a>
+                                                <a class="nav-link" href="#">NavItem 2</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -669,13 +669,13 @@
                                                      data-bs-parent="#navMenuLevelThree">
                                                     <ul class="nav flex-column">
                                                         <li class="nav-item">
-                                                            <a class="nav-link " href="#">NavChild Item 1</a>
+                                                            <a class="nav-link" href="#">NavChild Item 1</a>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link " href="#">Nav Item 2</a>
+                                                <a class="nav-link" href="#">Nav Item 2</a>
                                             </li>
                                         </ul>
                                     </div>
