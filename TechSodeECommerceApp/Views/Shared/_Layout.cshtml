@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta content="TechSode" name="author" />
     <title>TechSode Ecommerce App</title>
@@ -49,7 +49,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <!-- navbar -->
         <div class="border-bottom">
@@ -132,12 +132,12 @@
                 <div class="container">
                     <div class="row w-100 align-items-center gx-lg-2 gx-0">
                         <div class="col-xxl-2 col-lg-3 col-md-6 col-5">
-                            <a class="navbar-brand d-none d-lg-block" asp-action="Index">
-                                <img src="~/assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
+                            <a class="navbar-brand d-none d-lg-block" asp-controller="Home" asp-action="Index">
+                                <img src="~/assets/images/logo/TechSodeLogo.png" alt="eCommerce HTML Template" height="31px" width="160px"/>
                             </a>
                             <div class="d-flex justify-content-between w-100 d-lg-none">
-                                <a class="navbar-brand" asp-action="Index">
-                                    <img src="~/assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
+                                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                                    <img src="~/assets/images/logo/TechSodeLogo.png" alt="eCommerce HTML Template" height="31px" width="160px" />
                                 </a>
                             </div>
                         </div>
@@ -256,7 +256,7 @@
                 <div class="container">
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-default" aria-labelledby="navbar-defaultLabel">
                         <div class="offcanvas-header pb-1">
-                            <a asp-action="Index"><img src="~/assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" /></a>
+                            <a asp-controller="Home" asp-action="Index"><img src="~/assets/images/logo/TechSodeLogo.png" alt="eCommerce HTML Template" height="31px" width="160px" /></a>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
@@ -366,7 +366,7 @@
                                     <li class="nav-item dropdown w-100 w-lg-auto">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" asp-action="Index">Home 1</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Home 1</a></li>
                                             <li><a class="dropdown-item" asp-action="Index2">Home 2</a></li>
                                             <li><a class="dropdown-item" asp-action="Index3">Home 3</a></li>
                                             <li><a class="dropdown-item" asp-action="Index4">Home 4</a></li>
@@ -465,8 +465,32 @@
                                     <li class="nav-item dropdown w-100 w-lg-auto">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" asp-action="SignIn">Sign in</a></li>
-                                            <li><a class="dropdown-item" asp-action="SignUp">Signup</a></li>
+                                            @if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li class="nav-item">
+                                                    <a class="nav-link" asp-controller="Account" asp-action="Profile">Profile</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <!-- Adding Anti-Forgery Token to the Form -->
+                                                    <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="d-inline">
+                                                        @Html.AntiForgeryToken()
+                                                        <button type="submit" class="btn btn-link nav-link" style="border: none; background: none; cursor: pointer;">
+                                                            Logout
+                                                        </button>
+                                                    </form>
+
+                                                </li>
+                                            }
+                                            else
+                                            {
+                                                <li class="nav-item">
+                                                    <a class="nav-link" asp-controller="Account" asp-action="Login">Login</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" asp-controller="Account" asp-action="Register">Register</a>
+                                                </li>
+                                            }
+                                            <li> <a class="nav-link" asp-controller="Role" asp-action="RoleMapping">Role Mapping</a> </li>
                                             <li><a class="dropdown-item" asp-action="ForgotPassword">Forgot Password</a></li>
                                             <li class="dropdown-submenu dropend">
                                                 <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">My Account</a>
@@ -481,7 +505,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item w-100 w-lg-auto">
-                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Dashboard" asp-controller="Home" asp-action="Index">Dashboard</a>
                                     </li>
                                     <li class="nav-item dropdown w-100 w-lg-auto dropdown-flyout">
                                         <a class="nav-link" href="#" id="navbarDropdownDocs" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Docs</a>
@@ -950,7 +974,7 @@
         <script src="~/assets/js/vendors/validation.js"></script>
 
     </header>
-    
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -1292,6 +1316,38 @@
     <script src="~/assets/js/vendors/tns-slider.js"></script>
     <script src="~/assets/js/vendors/zoom.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @section Scripts {
+
+        <script>
+            // Function to show modal for email sent
+            function showEmailSentModal() {
+                $('#emailSentModal').modal('show');
+            }
+
+            // Function to show modal for email success
+            function showEmailSuccessModal() {
+                $('#emailSuccessModal').modal('show');
+            }
+
+            // Automatically trigger modals based on some condition
+            $(document).ready(function () {
+            @* Check if there's a flag to show a modal *@
+                var showEmailSent = '@ViewBag.ShowEmailSent';
+                var showEmailSuccess = '@ViewBag.ShowEmailSuccess';
+
+                if (showEmailSent === 'true') {
+                    showEmailSentModal();
+                }
+
+                if (showEmailSuccess === 'true') {
+                    showEmailSuccessModal();
+                }
+            });
+        </script>
+    }
+
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -27,12 +27,13 @@
             <!-- col -->
             <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
                 <div class="mb-lg-9 mb-5">
-                    <h1 class="mb-1 h2 fw-bold">Sign in to FreshCart</h1>
-                    <p>Welcome back to FreshCart! Enter your email to get started.</p>
+                    <h1 class="mb-1 h2 fw-bold">Sign in to TechSode</h1>
+                    <p>Welcome back to TechSode! Enter your email to get started.</p>
                 </div>
 
-                <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                    <input asp-for="ReturnUrl" type="hidden" />
+                <form asp-action="Login" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
                     <div class="row g-3">
                         <!-- row -->
 
@@ -43,10 +44,13 @@
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
                         <div class="col-12">
-                            <!-- input -->
-                            <div class="password-field position-relative">
-                                <label asp-for="Password"></label>
-                                <input asp-for="Password" class="form-control" />
+                            <div class="form-group mb-3">
+                                <label asp-for="Password" class="form-label"></label>
+                                <div class="input-group">
+                                    <input asp-for="Password" class="form-control" id="Password" placeholder="Enter Password" required /><button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
                                 <span asp-validation-for="Password" class="text-danger"></span>
                             </div>
                         </div>
@@ -63,12 +67,14 @@
                                 <a asp-action="ForgotPassword">Reset It</a>
                             </div>
                         </div>
+                        <!-- Ensure returnUrl is captured correctly -->
+                        <input type="hidden" asp-for="ReturnUrl" value="@ViewData["ReturnUrl"]" />
                         <!-- btn -->
                         <div class="col-12 d-grid"><button type="submit" class="btn btn-primary">Sign In</button></div>
                         <!-- link -->
                         <div>
                             Don’t have an account?
-                            <a asp-action="SignUp">Sign Up</a>
+                            <a asp-action="Register">Sign Up</a>
                         </div>
                     </div>
                 </form>
@@ -76,3 +82,22 @@
         </div>
     </div>
 </section>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#togglePassword').on('click', function () {
+            // Get the password input field and button icon
+            var passwordField = $('#Password');
+            var icon = $(this).find('i');
+
+            // Toggle the type attribute of the password field
+            var type = passwordField.attr('type') === 'password' ? 'text' : 'password';
+            passwordField.attr('type', type);
+
+            // Toggle the icon class for visibility indication
+            icon.toggleClass('bi-eye bi-eye-slash');
+        });
+    });
+</script>

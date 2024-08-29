@@ -1,4 +1,9 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿@using TechSodeECommerceApp.Repositories.Repo;
+
+@model TechSodeECommerceApp.ViewModels.RegisterViewModel
+
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "SignUp";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -19,43 +24,34 @@
             <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
                 <div class="mb-lg-9 mb-5">
                     <h1 class="mb-1 h2 fw-bold">Get Start Shopping</h1>
-                    <p>Welcome to FreshCart! Enter your email to get started.</p>
+                    <p>Welcome to TechSode! Enter your email to get started.</p>
                 </div>
                 <!-- form -->
-                <form class="needs-validation" novalidate>
+                <form asp-action="Register" method="post">
                     <div class="row g-3">
                         <!-- col -->
-                        <div class="col">
-                            <!-- input -->
-                            <label for="formSignupfname" class="form-label visually-hidden">First Name</label>
-                            <input type="text" class="form-control" id="formSignupfname" placeholder="First Name" required />
-                            <div class="invalid-feedback">Please enter first name.</div>
+                        <div class="col-12 form-group">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
-                        <div class="col">
-                            <!-- input -->
-                            <label for="formSignuplname" class="form-label visually-hidden">Last Name</label>
-                            <input type="text" class="form-control" id="formSignuplname" placeholder="First Name" required />
-                            <div class="invalid-feedback">Please enter last name.</div>
-                        </div>
-                        <div class="col-12">
-                            <!-- input -->
-                            <label for="formSignupEmail" class="form-label visually-hidden">Email address</label>
-                            <input type="email" class="form-control" id="formSignupEmail" placeholder="Email" required />
-                            <div class="invalid-feedback">Please enter email.</div>
-                        </div>
-                        <div class="col-12">
-                            <div class="password-field position-relative">
-                                <label for="formSignupPassword" class="form-label visually-hidden">Password</label>
-                                <div class="password-field position-relative">
-                                    <input type="password" class="form-control fakePassword" id="formSignupPassword" placeholder="*****" required />
-                                    <span><i class="bi bi-eye-slash passwordToggler"></i></span>
-                                    <div class="invalid-feedback">Please enter password.</div>
-                                </div>
+                        <div class="col-12 form-group">
+                            <label asp-for="Password"></label>
+                            <div class="input-group">
+                                <input asp-for="Password" type="password" class="form-control" />
+                                <span><i class="bi bi-eye-slash passwordToggler"></i></span>
                             </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
-                        <!-- btn -->
-                        <div class="col-12 d-grid"><button type="submit" class="btn btn-primary">Register</button></div>
-
+                        <div class="form-group">
+                            <label asp-for="ConfirmPassword"></label>
+                            <div class="input-group">
+                                <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                                <span><i class="bi bi-eye-slash passwordToggler"></i></span>
+                            </div>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
                         <!-- text -->
                         <p>
                             <small>
@@ -72,4 +68,7 @@
     </div>
 </section>
 
+@* Include modals in your main view *@
+@await Html.PartialAsync("ConfirmEmailSent")
+@await Html.PartialAsync("ConfirmEmailSuccess")
 

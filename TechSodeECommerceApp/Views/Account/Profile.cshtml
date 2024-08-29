@@ -1,0 +1,36 @@
+﻿@model TechSodeECommerceApp.ViewModels.ProfileViewModel
+
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name Profile</h2>
+
+<div class="alert alert-success">
+    @if (TempData["NewUser"] != null)
+    {
+        <p>You're successfully registered at TechSode!</p>
+    }
+    else
+    {
+        <p>Welcome back, @Model.Name!</p>
+    }
+</div>
+
+<div class="profile-details">
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Phone:</strong> @Model.Phone</p>
+</div>
+
+<div>
+    <a asp-action="EditProfile" class="btn btn-primary">Edit Profile</a>
+    <!-- Adding Anti-Forgery Token to the Form -->
+    <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="d-inline">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">
+            Logout
+        </button>
+    </form>
+</div>
